@@ -1,0 +1,31 @@
+{
+  "name": "wcs-bruxelle-landing-page",
+  "version": "1.0.0",
+  "description": "Nuxt.js project",
+  "author": "Rabin Julien <julienr114@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=dev node index.js",
+    "build": "NODE_ENV=production node index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "bulma": "^0.7.1",
+    "express": "^4.16.3",
+    "font-awesome": "^4.7.0",
+    "nuxt": "^1.4.1",
+    "nuxt-i18n": "^4.0.0",
+    "pug": "^2.0.3",
+    "pug-loader": "^2.4.0",
+    "vue-googlemaps": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3"
+  }
+}
