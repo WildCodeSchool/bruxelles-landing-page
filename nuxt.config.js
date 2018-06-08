@@ -10,7 +10,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  routerBase,
+  ...routerBase,
   head: {
     title: 'Formation développeur web Bruxelles',
     meta: [
