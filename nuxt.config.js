@@ -1,7 +1,16 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/bruxelles-landing-page/'
+  }
+} : {}
+
+const generateDir = process.env.DEPLOY_ENV === 'GH_PAGES' ? 'docs' : 'dist'
+
 module.exports = {
   /*
   ** Headers of the page
   */
+  routerBase,
   head: {
     title: 'Formation développeur web Bruxelles',
     meta: [
@@ -28,8 +37,7 @@ module.exports = {
   modules: [
     ['nuxt-i18n', {
       locales: [
-        { code: 'be', iso: 'fr-BE', file: 'be.js' },
-        { code: 'en', iso: 'en-UK', file: 'en.js' },
+        { code: 'be', iso: 'fr-BE', file: 'be.js' }
       ],
       defaultLocale: 'be',
       seo: true,
@@ -59,5 +67,8 @@ module.exports = {
         })
       }
     }
+  },
+  generate: {
+    dir: generateDir
   }
 }
