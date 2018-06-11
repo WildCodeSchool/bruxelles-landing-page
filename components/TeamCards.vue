@@ -4,17 +4,22 @@
     .card
       .card-image
         img(:src="user.img")
-      .card-content.has-text-centered
-        h3.title {{ user.name }}
-        h4.subtitle.has-text-grey {{ user.role }}
-        nav.icons
+      .card-content
+        .has-text-centered
+          h3.title {{ user.name }}
+          h4.subtitle.has-text-grey {{ user.role }}
+        p
           a.has-text-dark(v-if="user.phone", :href="'tel:+' + user.phone")
             span.icon.is-small
               i.fa.fa-phone
+            | {{ user.phone }}
+        p
           a.has-text-dark(v-if="user.mail", :href="'mailto:' + user.mail")
             span.icon.is-small
               i.fa.fa-envelope
-        a(@click="show(index)") {{ $t('actions.know_more') }}
+            | {{ user.mail }}
+        .has-text-centered
+          a(@click="show(index)") {{ $t('actions.know_more') }}
 
   .modal(:class="{ 'is-active': isActive }")
     .modal-background(@click="isActive = false")
@@ -58,13 +63,8 @@ export default {
     display: flex;
     .card {
       max-width: 350px;
-      nav.icons {
-        display: flex;
-        justify-content: center;
-        margin: 5px 0 20px 0;
-        a {
-          margin: 0 10px;
-        }
+      span.icon {
+        margin-right: 10px;
       }
     }
   }
