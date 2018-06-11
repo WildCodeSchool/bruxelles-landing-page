@@ -3,6 +3,13 @@
     sub-header
     navbar
     nuxt
+    footer.footer.has-text-white
+      .container
+        .content.has-text-centered 
+          | Made with
+          span.icon.has-text-primary
+            i.fas.fa-heart
+          | by Wild Code School
   
 </template>
 

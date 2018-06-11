@@ -3,22 +3,26 @@ export default {
   main_subtitle: 'Formation développeur web Bruxelles',
   actions: {
     apply: 'JE POSTULE',
-    download: 'Télécharger'
+    download: 'Télécharger',
+    know_more: 'En savoir plus'
   },
   section_1: {
     title: 'Viens te former au métier de développeur web à la Wild Code School Bruxelles !',
     content: `
-      La Wild Code School te permet de te former à la programmation informatique avec une pédagogie innovante, 
+      La Wild Code School te permet de te former à la programmation informatique avec une {0}, 
       en réalisant des projets pour de vrais clients. Pendant 5 mois, 
       tu vas te spécialiser sur une technologie particulièrement demandée sur le marché du travail belge 
       (Java/JEE, PHP/Symfony ou Javascript/React/NodeJS). 
-      Tu auras ainsi un portfolio de projets à présenter à de futurs recruteurs.
+      Tu auras ainsi un portfolio de projets à présenter à de futurs employeurs.
     `,
+    content_link: [
+      { content: 'pédagogie innovante', url: 'https://wildcodeschool.fr/pedagogie-hybride/'}
+    ],
     download_program: 'Télécharger le programme de la formation'
   },
   section_2 : {
     title: 'Prochaine session de formation développeur web',
-    subtitle: '17 septembre 2018 - 15 février 2019',
+    subtitle: '1er octobre 2018 au 1er mars 2019.',
     content: `
       Découvre si le métier de développeur web est fait pour toi 
       en commençant à apprendre les bases de la programmation informatique 
@@ -33,6 +37,11 @@ export default {
       cet accélérateur de startup et scale-up rassemble une communauté de résidents, 
       partenaires, sponsors et influenceurs
     `,
+    images: [
+      { url: 'parvis-cathedrale.jpg', alt: 'Parvis Saint Gudule' },
+      { url: 'coding-school.jpg', alt: 'Locaux coding school' },
+      { url: 'co.station-logo.jpg', alt: 'Logo accélérateur de startup Co.Station' }
+    ],
     access: {
       title: 'Accès à notre formation développeur web depuis:',
       list: [
@@ -64,7 +73,8 @@ export default {
           Cette école permet à des personnes complètement débutantes comme moi d’apprendre à coder 
           et d’en faire leur métier et c’est génial !
         `,
-        src: `https://wildcodeschool.fr/blog/metier-de-developpeur`
+        img: 'metier-de-developpeur_valentin.png',
+        link: `https://wildcodeschool.fr/blog/metier-de-developpeur`
       },
       {
         author: 'Pauline',
@@ -74,9 +84,11 @@ export default {
           Quel que soit ton profil, peu importe ce que t’as fait avant : il y a de la place pour tout le monde. 
           Même les profils différents, on apporte tous quelque chose.
         `,
-        src: `https://wildcodeschool.fr/blog/portrait-pauline-developpeuse/`
+        img: 'pauline-developpeuse.png',
+        link: `https://wildcodeschool.fr/blog/portrait-pauline-developpeuse/`
       }
-    ]
+    ],
+    show_src: 'Voir le portrait de {author}'
   },
   section_6 : {
     title: 'Qui sommes nous ?',
@@ -96,19 +108,24 @@ export default {
   team: {
     title: 'Contact',
     wild_side: 'Son coté Wild',
-    campus_manager: {
-      name: 'François Blondeau',
-      role: 'Campus Manager, Bruxelles',
-      bio: `
-        Après avoir étudié les ressources humaine, François a fait carrière dans l’intérim.
-        Suite à cette expérience, il a créé une société de recrutement qu’il a co-géré pendant 5 ans. 
-        Passionné par le développement de compétences, 
-        il a décidé de rejoindre la Wild Code School pour développer le premier campus à l’international.
-      `,
-      wild_side: `
-        Seul, avec ses ses deux enfants, ou avec des amis, 
-        il n’hésite pas à prendre sa tente et partir à l’aventure en randonnée pendant plusieurs jours.
-      `
-    }
+    users: [
+      {
+        name: 'François Blondeau',
+        role: 'Campus Manager, Bruxelles',
+        img: 'Francois_blondeau-350x350.jpg',
+        phone: '32499179157',
+        mail: 'francois@wildcodeschool.be',
+        bio: `
+          Après avoir étudié les ressources humaine, François a fait carrière dans l’intérim.
+          Suite à cette expérience, il a créé une société de recrutement qu’il a co-géré pendant 5 ans. 
+          Passionné par le développement de compétences, 
+          il a décidé de rejoindre la Wild Code School pour développer le premier campus à l’international.
+        `,
+        wild_side: `
+          Seul, avec ses ses deux enfants, ou avec des amis, 
+          il n’hésite pas à prendre sa tente et partir à l’aventure en randonnée pendant plusieurs jours.
+        `
+      }
+    ]
   },
 }

@@ -11,7 +11,8 @@
     section.section.is-medium
       .container
         h2.title.has-text-centered {{ $t('section_1.title') }}
-        p {{ $t('section_1.content') }}
+        i18n(path="section_1.content", tag="p") 
+          a(v-for="(link, index) in $t('section_1.content_link')", :href="link.url") {{ link.content }}
         .field.is-vertical.has-text-centered
           h3 {{ $t('section_1.download_program')}}
           a.button.is-large(:href="PROGRAMM_URL", target="_blank")
@@ -35,11 +36,13 @@
       .container
         h2.title.has-text-centered {{ $t('section_3.title') }}
         p {{ $t('section_3.main_content') }}
-      .columns
-        .column(v-for='(image, imageIndex) in images', :key='imageIndex', @click='galleryIndex = imageIndex')
-          img(:src="image")
 
-      .container
+        hr
+        
+        gallery(:imgs="$t('section_3.images')")
+
+        hr
+
         .columns
           .column
             googlemaps-map(:center="COORD", :zoom="12", :options="GG_MAP_OPT")
@@ -54,12 +57,13 @@
         h2.title.has-text-centered {{ $t('section_4.title') }}
         .columns
           .column(v-for="(testimonial, index) in $t('section_4.testimonials')")
-            testimonial-box(:author="testimonial.author", avatar="https://bulma.io/images/placeholders/128x128.png")
+            testimonial-box(:src="testimonial")
               p(slot="content") {{ testimonial.content }}
 
     section.section.is-medium
       .container
         h2.title.has-text-centered {{ $t('team.title') }}
+        team-cards(:team="$t('team.users')")
 
     section.section.is-medium.has-background-white-ter
       .container
@@ -72,23 +76,15 @@
 
 <script>
 import { PROGRAMM_URL, COORD, GG_MAP_OPT } from '~/const.js'
+import Gallery from '~/components/Gallery'
+import TeamCards from '~/components/TeamCards'
 import TestimonialBox from '~/components/TestimonialBox'
 
 export default {
   components: {
+    Gallery,
+    TeamCards,
     TestimonialBox
-  },
-
-  data () {
-    return {
-      images: [
-        'kathedraal.jpg',
-        'bruxelles_central.jpg',
-        'costationBXL_visu.jpg',
-        'costation_logo.jpg'
-      ],
-      galleryIndex: null
-    }
   },
 
   computed: {
@@ -104,6 +100,7 @@ export default {
 
 #index.content {
   margin-top: -$custom-navbar-heigth;
+  margin-bottom: 0;
   section.header.hero .hero-body {
     background-image: url(~/assets/header_background.jpg);
     background-repeat: no-repeat;
@@ -119,7 +116,7 @@ export default {
     background-image: url(~/assets/Sunset_from_Cathedrale_des_Saint_Michel_et_Gudule.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50% 90%;
+    background-position: 50% 80%;
     padding: 16rem 0;
   }
 
@@ -145,6 +142,5 @@ export default {
     height: 100%;
   }
 
-  
 }
 </style>

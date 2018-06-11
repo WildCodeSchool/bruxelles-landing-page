@@ -1,4 +1,4 @@
-export const PROGRAMM_URL = 'http://wildcodeschool-2902314.hs-sites.com/d%C3%A9veloppeur?__hstc=83542985.ae958f26ee4a5f2928577040d10ea65a.1520949375924.1528379128638.1528455777077.66&__hssc=83542985.1.1528455777077&__hsfp=2367772540'
+export const PROGRAMM_URL = 'http://wildcodeschool-2902314.hs-sites.com/d%C3%A9veloppeur-0'
 export const COORD = {
   lat: 50.84746759999999,
   lng: 4.359115699999961
