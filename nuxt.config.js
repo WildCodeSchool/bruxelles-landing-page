@@ -1,8 +1,8 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/bruxelles-landing-page/'
-  }
-} : {}
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     base: '/bruxelles-landing-page/'
+//   }
+// } : {}
 
 const generateDir = process.env.DEPLOY_ENV === 'GH_PAGES' ? 'docs' : 'dist'
 
@@ -10,7 +10,6 @@ module.exports = {
   /*
   ** Headers of the page
   */
-  ...routerBase,
   head: {
     title: 'Formation développeur web Bruxelles',
     meta: [
