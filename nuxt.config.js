@@ -34,6 +34,7 @@ module.exports = {
     { src: '~assets/main.scss', lang: 'scss' }
   ],
   modules: [
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-MFPXV7C' }],
     ['nuxt-i18n', {
       locales: [
         { code: 'be', iso: 'fr-BE', file: 'be.js' }
