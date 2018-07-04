@@ -88,6 +88,7 @@ export default {
         link: `https://wildcodeschool.fr/blog/portrait-pauline-developpeuse/`
       }
     ],
+    img_alt: 'Portraits de #Wilders: {name}',
     show_src: 'Voir le portrait de {author}'
   },
   section_6 : {

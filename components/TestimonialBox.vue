@@ -1,7 +1,7 @@
 <template lang="pug">
 .testimonial.card
   .card-image
-    img(:src="src.img")
+    img(:src="src.img", :alt="$t('section_4.img_alt', { name: src.author })")
   .card-content
     .media
       .media-left

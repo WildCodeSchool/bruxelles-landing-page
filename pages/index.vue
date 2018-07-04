@@ -4,7 +4,7 @@
       .hero-body
         .container
           h1.title.is-1.is-size-3-mobile {{ $t('main_title') }}
-          h2.subtitle.is-3.is-size-5-mobile
+          span.subtitle.is-3.is-size-5-mobile
             | by 
             strong.wild Wild Code School 
 
@@ -22,8 +22,8 @@
 
     section.section.is-medium.has-background-white-ter.has-text-centered
       .container
-        h2.title {{ $t('section_2.title') }}
-        h3.subtitle {{ $t('section_2.subtitle') }}
+        h3.title {{ $t('section_2.title') }}
+        h4.subtitle {{ $t('section_2.subtitle') }}
         p {{ $t('section_2.content') }}
         a.button.is-primary.is-large(href="https://odyssey.wildcodeschool.fr/")
           span.icon
@@ -34,7 +34,7 @@
 
     section.section.is-medium
       .container
-        h2.title.has-text-centered {{ $t('section_3.title') }}
+        h3.title.has-text-centered {{ $t('section_3.title') }}
         p {{ $t('section_3.main_content') }}
 
         hr
@@ -54,7 +54,7 @@
 
     section.section.is-medium.has-background-white-ter
       .container
-        h2.title.has-text-centered {{ $t('section_4.title') }}
+        h3.title.has-text-centered {{ $t('section_4.title') }}
         .columns
           .column(v-for="(testimonial, index) in $t('section_4.testimonials')")
             testimonial-box(:src="testimonial")
@@ -62,12 +62,12 @@
 
     section.section.is-medium
       .container
-        h2.title.has-text-centered {{ $t('team.title') }}
+        h3.title.has-text-centered {{ $t('team.title') }}
         team-cards(:team="$t('team.users')")
 
     section.section.is-medium.has-background-white-ter
       .container
-        h2.title.has-text-centered {{ $t('section_6.title') }}
+        h3.title.has-text-centered {{ $t('section_6.title') }}
         p(v-for="(content, index) in $t('section_6.content')") {{ content }}
         p 
           | {{ $t('section_6.know_more') }}
