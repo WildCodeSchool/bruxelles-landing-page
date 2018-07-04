@@ -16,7 +16,7 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Formation développeur web à Bruxelles par la Wild Code School' },
-      { hid: 'keywords', name: 'keywords', content: 'formation développeur web bruxelle wild code school programmation informatique' }
+      { hid: 'keywords', name: 'keywords', content: 'formation,développeur,web,bruxelle,wild,code,school,programmation,informatique' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
