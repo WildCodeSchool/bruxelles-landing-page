@@ -6,6 +6,14 @@ export default {
     download: 'Télécharger',
     know_more: 'En savoir plus'
   },
+  section_meetups: {
+    title: 'Viens nous rencontrer lors de nos prochains événement à Bruxelles',
+    post_scriptum: 'Inscris-toi à notre {0}. Il regroupe tout les événements de notre campus de Bruxelles',
+    post_scriptum_link: [
+      { content: 'groupe Meetup', link: 'https://www.meetup.com/Wild-Code-School-Bruxelles/' }
+    ]
+
+  },
   section_1: {
     title: 'Viens te former au métier de développeur web à la Wild Code School Bruxelles !',
     content: `

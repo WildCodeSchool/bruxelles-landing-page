@@ -8,7 +8,7 @@
             | by 
             strong.wild Wild Code School 
 
-    section.section.is-medium
+    section.section.is-medium.has-background-white-ter
       .container
         h2.title.has-text-centered {{ $t('section_1.title') }}
         i18n(path="section_1.content", tag="p") 
@@ -19,6 +19,16 @@
             span.icon
               i.fas.fa-arrow-down
             span {{ $t('actions.download')}}
+
+    section.section.is-medium
+      .container
+        h3.title.has-text-centered {{ $t('section_meetups.title') }}
+        .meetup__events
+          #meetup__events.meetup__events__container
+        .post__scriptum
+        i18n(path="section_meetups.post_scriptum", tag="p").has-text-centered
+          a(v-for="(link, index) in $t('section_meetups.post_scriptum_link')", :href="link.url") {{ link.content }}
+      
 
     section.section.is-medium.has-background-white-ter.has-text-centered
       .container
@@ -79,8 +89,10 @@ import { PROGRAMM_URL, COORD, GG_MAP_OPT } from '~/const.js'
 import Gallery from '~/components/Gallery'
 import TeamCards from '~/components/TeamCards'
 import TestimonialBox from '~/components/TestimonialBox'
+import loadMeetutGroupEvents from '~/assets/scripts/meetupsEvents.js'
 
 export default {
+  
   components: {
     Gallery,
     TeamCards,
@@ -91,6 +103,12 @@ export default {
     PROGRAMM_URL: () => PROGRAMM_URL,
     COORD: () => COORD,
     GG_MAP_OPT: () => GG_MAP_OPT
+  },
+
+  mounted () {
+    this.$nextTick(() => {
+      loadMeetutGroupEvents('Wild-Code-School-Bruxelles')
+    })
   }
 }
 </script>
@@ -142,5 +160,8 @@ export default {
     height: 100%;
   }
 
+  .post__scriptum {
+    margin-top: 20px;
+  }
 }
 </style>

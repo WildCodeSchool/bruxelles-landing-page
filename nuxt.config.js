@@ -32,7 +32,8 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    { src: '~assets/main.scss', lang: 'scss' }
+    { src: '~assets/main.scss', lang: 'scss' },
+    { src: '~assets/meetupEvents.css', lang: 'css' }
   ],
   modules: [
     ['@nuxtjs/google-tag-manager', { id: 'GTM-MFPXV7C' }],
