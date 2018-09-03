@@ -28,9 +28,22 @@
         .post__scriptum
         i18n(path="section_meetups.post_scriptum", tag="p").has-text-centered
           a(v-for="(link, index) in $t('section_meetups.post_scriptum_link')", :href="link.url") {{ link.content }}
-      
 
-    section.section.is-medium.has-background-white-ter.has-text-centered
+    section#how.section.is-medium.has-background-white-ter.has-text-centered
+      .container 
+        h3.title.has-text-centered {{ $t('section_how.title') }}
+        p.has-text-weight-semibold {{ $t('section_how.intro') }}
+        img(:src="$t('section_how.infographieUrl')", :alt="$t('section_how.infographieAlt')")
+        .steps__container
+          .media(v-for="(step, index) in $t('section_how.steps')", :key="index")
+            figure.media-left
+              span.icon(:style="{color: ['#b86bff', '#00d1b2', '#ff3860'][index]}")
+                i.fas(:class="step.icon")
+            .media-content  
+              h4 {{ step.title }}
+              p {{ step.content }}
+
+    section.section.is-medium.has-text-centered
       .container
         h3.title {{ $t('section_2.title') }}
         h4.subtitle {{ $t('section_2.subtitle') }}

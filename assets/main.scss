@@ -8,6 +8,12 @@
   }
 }
 
+section#how {
+  .steps__container {
+    margin-top: 30px;
+  }
+}
+
 @media screen and (min-width: 1088px) and (max-width: 1279px) {
   .container {
     max-width: 960px;

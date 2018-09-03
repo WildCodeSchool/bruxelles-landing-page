@@ -2,7 +2,7 @@ export default {
   main_title: 'Formation développeur web Bruxelles',
   main_subtitle: 'Formation développeur web Bruxelles',
   actions: {
-    apply: 'JE POSTULE',
+    apply: "JE M'INSCRIS",
     download: 'Télécharger',
     know_more: 'En savoir plus'
   },
@@ -27,6 +27,40 @@ export default {
       { content: 'pédagogie innovante', url: 'https://wildcodeschool.fr/pedagogie-hybride/'}
     ],
     download_program: 'Télécharger le programme de la formation'
+  },
+  section_how : {
+    title: 'Comment candidater à la formation développeur web et mobile ?',
+    intro: `
+      A la Wild Code School nous avons mis en place un processus de candidature ouvert à tous, 
+      se composant de trois grandes étapes, toutes obligatoires, destinées à tester ton appétence 
+      pour le développement et tes motivations pour devenir un développeur passionné.
+    `,
+    infographieUrl: '/infographie_process_candidature_be-BE.jpg', 
+    infographieAlt: 'infographie du processus de candidature à la Wild Code School',
+    steps: [
+      {
+        title: '1 - Des exercices à réaliser à distance sur notre plateforme en ligne Odyssey',
+        icon: 'fa-laptop',
+        content: `
+          Cela représentent 10 à 30 heures de travail qui vont te permettre de te familiariser à l’apprentissage du code. 
+          Nous te fournirons toute l’aide nécessaire pour réussir, même si tu es débutant. 
+          Ces exercices sont une excellente manière pour toi de t’assurer que tu souhaites devenir développeur et de mieux comprendre ce métier.
+        `,
+        action: 'Je commence les exercices'
+      }, {
+        title: '2 - La participation à un Wild Breakfast',
+        icon: 'fa-coffee',
+        content: 'Petit-déjeuner de présentation de l’école au cours duquel tu pourras découvrir notre pédagogie plus en détails mais aussi échanger avec nos élèves.',
+        action: `Je m'inscris à un Wild breakfast`
+      }, {
+        title: '3 - Des entretiens technique et de motivation',
+        icon: 'fa-comments',
+        content: `
+          Pour que nous puissions voir qui est le développeur passionné qui sommeille en toi. 
+          Note bien que pour être convoqué aux entretiens tu dois avoir réussi tes exercices à distance et avoir participé à un Wild Breakfast.
+        `
+      }
+    ] 
   },
   section_2 : {
     title: 'Prochaine session de formation développeur web',
