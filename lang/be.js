@@ -165,9 +165,18 @@ export default {
           il a décidé de rejoindre la Wild Code School pour développer le premier campus à l’international.
         `,
         wild_side: `
-          Seul, avec ses ses deux enfants, ou avec des amis, 
+          Seul, avec ses deux enfants, ou avec des amis, 
           il n’hésite pas à prendre sa tente et partir à l’aventure en randonnée pendant plusieurs jours.
         `
+      },
+      {
+        name: 'Sébastiano Olivo',
+        role: 'Formateur JS React, Bruxelles',
+        img: null,
+        phone: null,
+        mail: 'sebastiano@wildcodeschool.be',
+        bio: null,
+        wild_side: null
       }
     ]
   },

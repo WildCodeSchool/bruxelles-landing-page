@@ -3,7 +3,7 @@
   .column.is-one-third(v-for='(user, index) in team', :key='index')
     .card
       .card-image
-        img(:src="user.img", :alt="user.name + ' - ' + user.role")
+        img(:src="user.img || 'staff-man-default.png'", :alt="user.name + ' - ' + user.role")
       .card-content
         .has-text-centered
           p.title.is-4 {{ user.name }}
@@ -29,7 +29,7 @@
         p.subtitle.is-5.has-text-grey {{ team[current].role }}
         p {{ team[current].bio }}
 
-        p {{ $t('team.wild_side') }}
+        p.has-text-weight-bold {{ $t('team.wild_side') }}
         p {{ team[current].wild_side }}
     button.modal-close.is-large(@click="isActive = false")
 </template>
