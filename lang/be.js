@@ -172,11 +172,24 @@ export default {
       {
         name: 'Sébastiano Olivo',
         role: 'Formateur JS React, Bruxelles',
-        img: null,
+        img: 'sebastiano.jpg',
         phone: null,
         mail: 'sebastiano@wildcodeschool.be',
-        bio: null,
-        wild_side: null
+        bio: `
+          Après avoir décroché son master en développement et design, 
+          Sebastiano devient développeur front-end pour la Banque ING. 
+          Il y fait ses premières armes et après deux années de travail au sein de différentes équipes, 
+          il décide de se lancer un nouveau challenge. 
+          Il créer alors Vodou avec un ami, 
+          une boîte spécialisée dans la création site et d’expériences digitales. 
+          Après 2 années de travail et de consultances pour différentes entreprises, 
+          il décide de rejoindre la Wild Code School comme formateur afin de relever un nouveau défi.
+        `,
+        wild_side: `
+          Un bon jeu de plateau, 
+          une partie de badminton ou une escape room don’t il faut s’évader, 
+          il est toujours à l’affût d’une nouvelle occasion de s’amuser.
+        `
       }
     ]
   },
