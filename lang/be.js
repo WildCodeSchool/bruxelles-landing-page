@@ -64,7 +64,7 @@ export default {
   },
   section_2 : {
     title: 'Prochaine session de formation développeur web',
-    subtitle: '1er octobre 2018 au 1er mars 2019.',
+    subtitle: 'Mars 2019 (dates à venir)',
     content: `
       Découvre si le métier de développeur web est fait pour toi 
       en commençant à apprendre les bases de la programmation informatique 
